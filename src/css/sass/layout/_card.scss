@@ -93,7 +93,7 @@
 }
 
 .active{
-    .card-panel{
+    &.card-panel{
         @include border( solid 3px green , 20px);
         .card-header{
             @include border-bottom ( solid 3px green , 30px);

@@ -256,13 +256,13 @@ body {
 @media only screen and (max-width: 767px) {
   .card-panel {
     margin: calc((100% - 270px)/2); } }
-.active .card-panel {
+.active.card-panel {
   border: solid 3px green;
   border-radius: 20px; }
-.active .card-panel .card-header {
+.active.card-panel .card-header {
   border-bottom: solid 3px green;
   border-radius: 30px; }
-.active .card-panel .card-timer .hours, .active .card-panel .card-timer .minutes, .active .card-panel .card-timer .seconds {
+.active.card-panel .card-timer .hours, .active.card-panel .card-timer .minutes, .active.card-panel .card-timer .seconds {
   border-bottom: solid 3px green;
   border-radius: 3px; }
 

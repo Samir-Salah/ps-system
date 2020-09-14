@@ -1,8 +1,12 @@
 <template>
     <div class="cards">
         <div class="row">
-            <div class="col-md-3" :class="activeCard">
-                <Card class="card-home" @active="activeBorder" />
+            <div
+                class="col-md-3"
+                v-for="(card, index) in noOfCards"
+                :key="index"
+            >
+                <Card class="card-home" />
             </div>
         </div>
     </div>
@@ -15,23 +19,11 @@ export default {
     name: "Home",
     data: function() {
         return {
-            active: ""
+            noOfCards: 10
         };
     },
     components: {
         Card
-    },
-    methods: {
-        activeBorder: function(value) {
-            this.active = value;
-        }
-    },
-    computed: {
-        activeCard: function() {
-            return {
-                active: this.active
-            };
-        }
     }
 };
 </script>

@@ -1,30 +1,30 @@
 <template>
-    <div class="card-panel">
+    <div class="card-panel" :class="activeCard">
         <div class="card-header">
-            <img src="@/images/ps.png" alt="" />
+            <img src="@/images/ps.png" alt />
             <h2>{{ customerName }}</h2>
         </div>
         <div class="card-timer container">
             <lable class="hours" ref="hours" id="hours">{{
                 displayHours
-            }}</lable>
-            :
+            }}</lable
+            >:
             <input
                 th:field="*{cartTime.hours}"
                 class="inp1"
                 type="number"
-                value=""
+                value
                 hidden
             />
             <lable class="minutes" ref="minutes" id="minutes">{{
                 displayMinutes
-            }}</lable>
-            :
+            }}</lable
+            >:
             <input
                 th:field="*{cartTime.minutes}"
                 class="inp2"
                 type="number"
-                value=""
+                value
                 hidden
             />
             <lable class="seconds" ref="seconds" id="seconds">{{
@@ -34,7 +34,7 @@
                 th:field="*{cartTime.seconds}"
                 type="number"
                 class="inp3"
-                value=""
+                value
                 hidden
             />
         </div>
@@ -44,15 +44,10 @@
             <span class="card-timer-text-seconds">Seconds</span>
         </div>
         <div class="card-btn-area">
-            <button
-                id="startStop"
-                @click="startStop(), $emit('active', active)"
-            >
+            <button id="startStop" @click="startStop()">
                 {{ startStopBtn }}
             </button>
-            <button id="reset" @click="reset(), $emit('active', active)">
-                {{ resetBtn }}
-            </button>
+            <button id="reset" @click="reset()">{{ resetBtn }}</button>
         </div>
         <div class="card-select-area">
             <div class="input-group mb-3">
@@ -93,11 +88,11 @@
         </div>
         <div class="card-action-btn">
             <div class="card-add-item">
-                <img src="@/images/add-item.png" alt="" />
+                <img src="@/images/add-item.png" alt />
                 <button class="card-add-item-btn">Add Item</button>
             </div>
             <div class="card-checkout">
-                <img src="@/images/checkout.png" alt="" />
+                <img src="@/images/checkout.png" alt />
                 <input
                     type="submit"
                     class="card-checkout-btn"
@@ -150,6 +145,13 @@ export default {
                 }
             ]
         };
+    },
+    computed: {
+        activeCard: function() {
+            return {
+                active: this.active
+            };
+        }
     },
     methods: {
         stopWatch() {
