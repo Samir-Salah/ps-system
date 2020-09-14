@@ -1,8 +1,8 @@
 <template>
     <div class="cards">
         <div class="row">
-            <div class="col-md-3 col">
-                <Card class="card-home"/>
+            <div class="col-md-3">
+                <Card class="card-home" />
             </div>
         </div>
     </div>

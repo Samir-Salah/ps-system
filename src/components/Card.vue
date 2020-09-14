@@ -44,7 +44,9 @@
             <span class="card-timer-text-seconds">Seconds</span>
         </div>
         <div class="card-btn-area">
-            <button id="startStop" @click="startStop()">{{ startStopBtn }}</button>
+            <button id="startStop" @click="startStop()">
+                {{ startStopBtn }}
+            </button>
             <button id="reset" @click="reset()">{{ resetBtn }}</button>
         </div>
         <div class="card-select-area">
