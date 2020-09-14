@@ -154,7 +154,11 @@ body {
   bottom: none;
   right: none;
   border: solid 3px #f5deb3;
-  border-radius: 20px; }
+  border-radius: 20px;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear; }
 .card-panel .card-header {
   border-bottom: solid 3px #f5deb3;
   border-radius: 30px;
@@ -252,6 +256,16 @@ body {
 @media only screen and (max-width: 767px) {
   .card-panel {
     margin: calc((100% - 270px)/2); } }
+.active .card-panel {
+  border: solid 3px green;
+  border-radius: 20px; }
+.active .card-panel .card-header {
+  border-bottom: solid 3px green;
+  border-radius: 30px; }
+.active .card-panel .card-timer .hours, .active .card-panel .card-timer .minutes, .active .card-panel .card-timer .seconds {
+  border-bottom: solid 3px green;
+  border-radius: 3px; }
+
 .logout-btn {
   width: none;
   height: 25px;
@@ -291,6 +305,8 @@ body {
 #startStop:hover, #reset:hover {
   transform: scale(1.1); }
 
+#reset {
+  display: none; }
 #reset:hover {
   background-color: red;
   border: solid 0.5px #000; }

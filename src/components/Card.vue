@@ -44,10 +44,12 @@
             <span class="card-timer-text-seconds">Seconds</span>
         </div>
         <div class="card-btn-area">
-            <button id="startStop" @click="startStop()">
+            <button id="startStop" @click="startStop(), $emit('active', active)">
                 {{ startStopBtn }}
             </button>
-            <button id="reset" @click="reset()">{{ resetBtn }}</button>
+            <button id="reset" @click="reset(), $emit('active', active)">
+                {{ resetBtn }}
+            </button>
         </div>
         <div class="card-select-area">
             <div class="input-group mb-3">
@@ -119,6 +121,7 @@ export default {
             status: "stopped",
             startStopBtn: "Start",
             resetBtn: "Reset",
+            active: false,
             typesOfPlayers: [
                 {
                     id: 1,
@@ -145,6 +148,7 @@ export default {
             ]
         };
     },
+
     methods: {
         stopWatch() {
             this.seconds++;
@@ -182,6 +186,7 @@ export default {
                 this.startStopBtn = "Start";
                 this.status = "stopped";
             }
+            this.active = !this.active;
         },
         reset() {
             window.clearInterval(this.interval);
@@ -192,6 +197,9 @@ export default {
             this.displayMinutes = "00";
             this.displayHours = "00";
             this.startStopBtn = "Start";
+            if (this.active == true) {
+                this.active = false;
+            }
         }
     }
 };

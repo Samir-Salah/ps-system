@@ -29,6 +29,8 @@
 }
 #reset{
     @include hover(red,solid 0.5px #000);
+    display: none;
+
 }
 
 .card-add-item-btn, .card-checkout-btn{

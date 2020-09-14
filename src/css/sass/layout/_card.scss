@@ -2,6 +2,11 @@
     @include commonProberty( $card-width, 350px, #fff);
     @include position(relative, none , none, none , none);
     @include border( solid 3px $second-color , 20px);
+    @include prefixer(
+                    transition,
+                    all 0.3s linear,
+                    webkit moz o
+                );
     .card-header {
         @include border-bottom ( solid 3px $second-color , 30px);
         margin-bottom: 10px;
@@ -84,5 +89,19 @@
 @include mobile {
     .card-panel{
         margin: calc((100% - #{$card-width})/2);
+    }
+}
+
+.active{
+    .card-panel{
+        @include border( solid 3px green , 20px);
+        .card-header{
+            @include border-bottom ( solid 3px green , 30px);
+            }
+        .card-timer{
+            .hours,.minutes,.seconds{
+                @include border-bottom( solid 3px green , 3px);    
+            }
+        }
     }
 }
