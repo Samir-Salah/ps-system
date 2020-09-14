@@ -1,0 +1,52 @@
+.logout-btn {
+    @include commonProberty(none, 25px, #000);
+    @include prefixer(transition, all 0.3s ease-in-out, webkit moz o);
+    @include border(solid 1px #fff, 5px);
+    @include outlineBtn(none);
+    @include hover($second-color,solid 0.5px #000);
+    font: {
+        weight: 700;
+        size: 14px;
+    }
+    
+}
+
+#startStop,
+#reset {
+    @include border(solid 1px #000, 5px);
+    @include commonProberty(60px, 25px, none);
+    @include prefixer(transition, all 0.3s ease-in-out, webkit moz o);
+    @include outlineBtn(none);
+    @include hover($second-color,solid 0.5px #000);
+    margin: 12px;
+    font: {
+        size: 1.2em;
+        weight: 600;
+    }
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+#reset{
+    @include hover(red,solid 0.5px #000);
+}
+
+.card-add-item-btn, .card-checkout-btn{
+    @include border(solid 1px #000, 5px);
+    @include commonProberty(70px, 30px, none);
+    @include prefixer(transition, all 0.2s ease-in-out, webkit moz o);
+    @include outlineBtn(none);
+    font: {
+        size: 1.1em;
+        weight:600;
+    }
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+.card-add-item-btn{
+    @include hover(#0026b1,solid 0.5px #000);
+}
+.card-checkout-btn{
+    @include hover(#28a745,solid 0.5px #000);
+}

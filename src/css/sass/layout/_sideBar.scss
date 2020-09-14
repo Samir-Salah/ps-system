@@ -1,0 +1,62 @@
+.side-panel {
+    @include position(fixed,$header-height, 0 , none ,none );
+    @include commonProberty($side-width, 100%, none);
+    background-color: $main-color;
+    text-align: center;
+    z-index: 2;
+    .side-header {
+        @include commonProberty(100%, $side-header-height, #fff );
+        position: relative;
+        background-color: #171a1d;
+        .side-header-image {
+            @include position(absolute, 10px ,none,none,none);
+            img {
+                @include commonProberty(50px, 50px, none);
+            }
+        }
+        .side-header-username {
+            @include position(absolute,$side-header-height - 30px, none,none,none);
+            span {
+                color: $second-color;
+                font-weight: 400;
+            }
+        }
+    }
+    .side-content {
+        .side-list-items {
+            a {
+                @include commonProberty(100%, none, #fff);
+                text-decoration: none;
+                position: relative;
+                display: block;
+                line-height: 70px;
+                margin: 0;
+                @include prefixer(
+                    transition,
+                    all 0.5s ease-in-out,
+                    webkit moz o
+                );
+                font: {
+                    weight: 400;
+                    size: 1.0714285714285714em;
+                }
+                &:hover {
+                    background: #343a40;
+                    font: {
+                        size: 1.2142857142857142em;
+                    }
+                }
+                &:active {
+                    background: #343a40;
+                }
+                li {
+                    img {
+                        @include commonProberty(40px, 40px,none);
+                        @include position(relative, 12px, 5px, none,none);
+                        float: left;
+                    }
+                }
+            }
+        }
+    }
+}

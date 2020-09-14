@@ -1,0 +1,23 @@
+/* 
+
+@include keyFrames (fade-in-out){
+    0%{
+        opacity: .5;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: .5;
+    }
+}
+ */
+
+ .cards{
+    @include position(relative,  $header-height + 20px , $side-width + 20px, none , none);
+    width: calc( 100% - #{$side-width } - 60px);  
+      
+    .card-home{
+        margin-bottom: 30px;
+    }
+}

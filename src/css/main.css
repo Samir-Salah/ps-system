@@ -1,0 +1,384 @@
+@font-face {
+  font-family: "Nunito";
+  src: url("fonts/nunito-regular-webfont.woff2") format("woff2"), url("fonts/nunito-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  font-family: "Nunito", sans-serif;
+}
+
+body {
+  font-size: 12px;
+  background-color: #1b1f23;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.header-panel {
+  width: 100%;
+  height: 40px;
+  color: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: none;
+  right: none;
+  background-color: #25292D;
+  z-index: 1;
+  text-align: center;
+}
+.header-panel .header-logo {
+  width: 200px;
+  height: none;
+  color: #fff;
+  position: relative;
+  top: 8px;
+  left: none;
+  bottom: none;
+  right: none;
+  float: left;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 600;
+}
+.header-panel .header-logo span {
+  color: #f5deb3;
+}
+.header-panel .logout-side {
+  position: fixed;
+  top: 7.5px;
+  left: none;
+  bottom: none;
+  right: 20px;
+  float: right;
+}
+
+.side-panel {
+  position: fixed;
+  top: 40px;
+  left: 0;
+  bottom: none;
+  right: none;
+  width: 200px;
+  height: 100%;
+  color: none;
+  background-color: #25292D;
+  text-align: center;
+  z-index: 2;
+}
+.side-panel .side-header {
+  width: 100%;
+  height: 100px;
+  color: #fff;
+  position: relative;
+  background-color: #171a1d;
+}
+.side-panel .side-header .side-header-image {
+  position: absolute;
+  top: 10px;
+  left: none;
+  bottom: none;
+  right: none;
+}
+.side-panel .side-header .side-header-image img {
+  width: 50px;
+  height: 50px;
+  color: none;
+}
+.side-panel .side-header .side-header-username {
+  position: absolute;
+  top: 70px;
+  left: none;
+  bottom: none;
+  right: none;
+}
+.side-panel .side-header .side-header-username span {
+  color: #f5deb3;
+  font-weight: 400;
+}
+.side-panel .side-content .side-list-items a {
+  width: 100%;
+  height: none;
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  display: block;
+  line-height: 70px;
+  margin: 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  font-weight: 400;
+  font-size: 1.0714285714285714em;
+}
+.side-panel .side-content .side-list-items a:hover {
+  background: #343a40;
+  font-size: 1.2142857142857142em;
+}
+.side-panel .side-content .side-list-items a:active {
+  background: #343a40;
+}
+.side-panel .side-content .side-list-items a li img {
+  width: 40px;
+  height: 40px;
+  color: none;
+  position: relative;
+  top: 12px;
+  left: 5px;
+  bottom: none;
+  right: none;
+  float: left;
+}
+
+/* 
+
+@include keyFrames (fade-in-out){
+    0%{
+        opacity: .5;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: .5;
+    }
+}
+ */
+.cards {
+  position: relative;
+  top: 60px;
+  left: 220px;
+  bottom: none;
+  right: none;
+  width: calc( 100% - 200px - 60px);
+}
+.cards .card-home {
+  margin-bottom: 30px;
+}
+
+.card-panel {
+  width: 270px;
+  height: 350px;
+  color: #fff;
+  position: relative;
+  top: none;
+  left: none;
+  bottom: none;
+  right: none;
+  border: solid 3px #f5deb3;
+  border-radius: 20px;
+}
+.card-panel .card-header {
+  border-bottom: solid 3px #f5deb3;
+  border-radius: 30px;
+  margin-bottom: 10px;
+}
+.card-panel .card-header img {
+  width: 60px;
+  height: 60px;
+  color: unset;
+  position: relative;
+  top: 0;
+  left: 0;
+  bottom: none;
+  right: none;
+  float: left;
+  margin-top: -13px;
+}
+.card-panel .card-header h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.6em;
+  position: relative;
+  top: 7px;
+  left: 0;
+  bottom: none;
+  right: none;
+}
+.card-panel .card-timer {
+  position: relative;
+  text-align: center;
+  font-size: 3.1em;
+  font-weight: 400;
+}
+.card-panel .card-timer .hours, .card-panel .card-timer .minutes, .card-panel .card-timer .seconds {
+  border-bottom: solid 3px #f5deb3;
+  border-radius: 3px;
+}
+.card-panel .card-timer-text {
+  text-align: center;
+  margin-top: -4px;
+}
+.card-panel .card-timer-text .card-timer-text-hours {
+  position: relative;
+  top: none;
+  left: 43px;
+  bottom: none;
+  right: none;
+  float: left;
+}
+.card-panel .card-timer-text .card-timer-text-minutes {
+  position: relative;
+  top: none;
+  left: 7.5px;
+  bottom: none;
+  right: none;
+}
+.card-panel .card-timer-text .card-timer-text-seconds {
+  position: relative;
+  top: none;
+  left: none;
+  bottom: none;
+  right: 35px;
+  float: right;
+}
+.card-panel .card-btn-area {
+  text-align: center;
+}
+.card-panel .card-select-area {
+  margin-left: 16px;
+}
+.card-panel .card-select-area .card-select-players {
+  width: 158px;
+  height: 30px;
+  color: #25292D;
+}
+.card-panel .card-select-area .card-select-players:active, .card-panel .card-select-area .card-select-players:focus {
+  outline: none;
+}
+.card-panel .card-select-area .card-select-devices {
+  width: 158px;
+  height: 30px;
+  color: #25292D;
+}
+.card-panel .card-select-area .card-select-devices:active, .card-panel .card-select-area .card-select-devices:focus {
+  outline: none;
+}
+.card-panel .card-select-area .input-group-text {
+  width: 80px;
+  height: 30px;
+  color: #25292D;
+}
+.card-panel .card-action-btn {
+  position: relative;
+  top: 5px;
+  left: none;
+  bottom: none;
+  right: none;
+  padding: 0 15px 0 15px;
+}
+.card-panel .card-action-btn img {
+  width: 35px;
+  height: 35px;
+  color: none;
+  margin-right: 5px;
+  margin-bottom: 10px;
+}
+.card-panel .card-action-btn .card-add-item {
+  float: left;
+}
+.card-panel .card-action-btn .card-checkout {
+  float: right;
+}
+
+@media only screen and (max-width: 767px) {
+  .card-panel {
+    margin: calc((100% - 270px)/2);
+  }
+}
+.logout-btn {
+  width: none;
+  height: 25px;
+  color: #000;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  border: solid 1px #fff;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 14px;
+}
+.logout-btn:active, .logout-btn:focus {
+  outline: none;
+}
+.logout-btn:hover {
+  background-color: #f5deb3;
+  border: solid 0.5px #000;
+}
+
+#startStop,
+#reset {
+  border: solid 1px #000;
+  border-radius: 5px;
+  width: 60px;
+  height: 25px;
+  color: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  margin: 12px;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+#startStop:active, #startStop:focus,
+#reset:active,
+#reset:focus {
+  outline: none;
+}
+#startStop:hover,
+#reset:hover {
+  background-color: #f5deb3;
+  border: solid 0.5px #000;
+}
+#startStop:hover,
+#reset:hover {
+  transform: scale(1.1);
+}
+
+#reset:hover {
+  background-color: red;
+  border: solid 0.5px #000;
+}
+
+.card-add-item-btn, .card-checkout-btn {
+  border: solid 1px #000;
+  border-radius: 5px;
+  width: 70px;
+  height: 30px;
+  color: none;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  font-size: 1.1em;
+  font-weight: 600;
+}
+.card-add-item-btn:active, .card-add-item-btn:focus, .card-checkout-btn:active, .card-checkout-btn:focus {
+  outline: none;
+}
+.card-add-item-btn:hover, .card-checkout-btn:hover {
+  transform: scale(1.05);
+}
+
+.card-add-item-btn:hover {
+  background-color: #0026b1;
+  border: solid 0.5px #000;
+}
+
+.card-checkout-btn:hover {
+  background-color: #28a745;
+  border: solid 0.5px #000;
+}
+
+/*# sourceMappingURL=main.css.map */

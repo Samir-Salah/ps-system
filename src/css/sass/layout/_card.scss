@@ -1,0 +1,88 @@
+.card-panel {
+    @include commonProberty( $card-width, 350px, #fff);
+    @include position(relative, none , none, none , none);
+    @include border( solid 3px $second-color , 20px);
+    .card-header {
+        @include border-bottom ( solid 3px $second-color , 30px);
+        margin-bottom: 10px;
+        img {
+            @include commonProberty(60px, 60px, unset );
+            @include position(relative, 0 , 0, none , none);
+            float: left;
+            margin-top: -13px;
+        }
+        h2 {
+            text-transform: uppercase;
+            text-align: center;
+            font: {
+                weight: bold;
+                size: 1.6em;
+            }
+            @include position(relative , 7px, 0, none , none);
+        }
+    }
+    .card-timer{
+        position: relative;
+        text-align: center;
+        font: {
+            size: 3.1em;
+            weight: 400;
+        }
+        .hours,.minutes,.seconds{
+            @include border-bottom( solid 3px $second-color , 3px);
+        }
+    }
+    .card-timer-text{
+        text-align: center;
+        margin-top: -4px;
+        .card-timer-text-hours{
+            @include position(relative, none , 43px, none , none);
+            float: left;
+        }
+        .card-timer-text-minutes{
+            @include position(relative, none , 7.5px, none , none);
+        }
+        .card-timer-text-seconds{
+            @include position(relative, none , none, none , 35px);
+            float: right;            
+        }
+    }
+    .card-btn-area{
+        text-align: center;
+    }
+    .card-select-area{
+        margin-left:($card-width - ($card-select-players-height+$input-group-text-height)) / 2;
+        .card-select-players{
+            @include commonProberty($card-select-players-height, $card-select-players-width, $main-color);
+            @include outlineBtn(none);
+        }
+        .card-select-devices{
+            @include commonProberty($card-select-players-height , $card-select-players-width, $main-color);
+            @include outlineBtn(none);
+        }
+        .input-group-text{
+            @include commonProberty($input-group-text-height , $card-select-players-width, $main-color);
+        }
+    }
+    .card-action-btn{
+        @include position(relative, 5px , none ,none,none);
+        padding: 0 15px 0 15px;
+        img{
+            @include commonProberty(35px, 35px, none);
+            margin-right: 5px;
+            margin-bottom: 10px;
+        }
+        .card-add-item{
+            float: left;
+        }
+        .card-checkout{
+            float: right;
+        }
+    }
+}
+
+@include mobile {
+    .card-panel{
+        margin: calc((100% - #{$card-width})/2);
+    }
+}

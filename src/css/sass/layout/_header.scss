@@ -1,0 +1,24 @@
+.header-panel {
+    @include commonProberty(100%, $header-height, none);
+    @include position(fixed, 0, 0, none, none);
+    background-color: $main-color;
+    z-index: 1;
+    text-align: center;
+    .header-logo {
+        @include commonProberty( $side-width, none , #fff);
+        @include position(relative, ($header-height - $header-logo-font-size)/2.5, none, none, none);
+        float: left;
+        text-transform: uppercase;
+        font: {
+            size: $header-logo-font-size;
+            weight: 600;
+        }
+        span {
+            color: $second-color;
+        }
+    }
+    .logout-side {
+        @include position(fixed, ($header-height - 25px)/2 , none , none, 20px);
+        float: right;
+    }
+}

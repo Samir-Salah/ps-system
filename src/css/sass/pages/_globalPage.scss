@@ -1,0 +1,18 @@
+@font-face {
+    font-family: "Nunito";
+    src: url("fonts/nunito-regular-webfont.woff2") format("woff2"),
+        url("fonts/nunito-regular-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+    font-family: "Nunito", sans-serif;
+}
+body {
+    font: {
+        size: 12px;
+    }
+    background-color: #1b1f23;
+    overflow-y: auto;
+    overflow-x: auto; 
+}
