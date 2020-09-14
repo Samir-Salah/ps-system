@@ -44,7 +44,10 @@
             <span class="card-timer-text-seconds">Seconds</span>
         </div>
         <div class="card-btn-area">
-            <button id="startStop" @click="startStop(), $emit('active', active)">
+            <button
+                id="startStop"
+                @click="startStop(), $emit('active', active)"
+            >
                 {{ startStopBtn }}
             </button>
             <button id="reset" @click="reset(), $emit('active', active)">
@@ -148,7 +151,6 @@ export default {
             ]
         };
     },
-
     methods: {
         stopWatch() {
             this.seconds++;
