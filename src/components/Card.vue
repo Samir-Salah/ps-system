@@ -8,7 +8,7 @@
             <lable class="hours" ref="hours" id="hours">{{
                 displayHours
             }}</lable
-            >:
+            > :
             <input
                 th:field="*{cartTime.hours}"
                 class="inp1"
@@ -17,9 +17,9 @@
                 hidden
             />
             <lable class="minutes" ref="minutes" id="minutes">{{
-                displayMinutes
+                displayMinutes 
             }}</lable
-            >:
+            > :
             <input
                 th:field="*{cartTime.minutes}"
                 class="inp2"
@@ -28,7 +28,7 @@
                 hidden
             />
             <lable class="seconds" ref="seconds" id="seconds">{{
-                displaySeconds
+                displaySeconds 
             }}</lable>
             <input
                 th:field="*{cartTime.seconds}"
@@ -56,7 +56,7 @@
                     th:field="*{numberOfPlayer}"
                 >
                     <option selected value="null"
-                        >Select number of players</option
+                        >Select Mode</option
                     >
                     <option v-for="type in typesOfPlayers" :key="type.id">{{
                         type.typeName

@@ -35,12 +35,13 @@
 
 .card-add-item-btn, .card-checkout-btn{
     @include border(solid 1px #000, 5px);
-    @include commonProberty(70px, 30px, none);
+    @include commonProberty(60px, 25px, none);
     @include prefixer(transition, all 0.2s ease-in-out, webkit moz o);
     @include outlineBtn(none);
+    margin-left: 4px;
     font: {
-        size: 1.1em;
-        weight:600;
+        size: 0.9em;
+        weight:900;
     }
     &:hover {
         transform: scale(1.05);

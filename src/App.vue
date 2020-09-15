@@ -16,7 +16,5 @@ export default {
         Header,
         SideBar
     },
-    data: function(){
-    }
 };
 </script>

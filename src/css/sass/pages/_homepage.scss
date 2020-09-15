@@ -16,8 +16,8 @@
  .cards{
     @include position(relative,  $header-height + 20px , $side-width + 20px, none , none);
     width: calc( 100% - #{$side-width } - 60px);  
-      
+    margin: 20px;  
     .card-home{
-        margin-bottom: 30px;
-    }
+        margin-bottom: 50px;
+       }
 }

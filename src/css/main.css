@@ -2,20 +2,24 @@
   font-family: "Nunito";
   src: url("fonts/nunito-regular-webfont.woff2") format("woff2"), url("fonts/nunito-regular-webfont.woff") format("woff");
   font-weight: normal;
-  font-style: normal; }
+  font-style: normal;
+}
 * {
-  font-family: "Nunito", sans-serif; }
+  font-family: "Nunito", sans-serif;
+}
 
 body {
   font-size: 12px;
   background-color: #1b1f23;
   overflow-y: auto;
-  overflow-x: auto; }
+  overflow-x: auto;
+}
 
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 .header-panel {
   width: 100%;
@@ -28,7 +32,8 @@ body {
   right: none;
   background-color: #25292D;
   z-index: 1;
-  text-align: center; }
+  text-align: center;
+}
 .header-panel .header-logo {
   width: 200px;
   height: none;
@@ -41,16 +46,19 @@ body {
   float: left;
   text-transform: uppercase;
   font-size: 20px;
-  font-weight: 600; }
+  font-weight: 600;
+}
 .header-panel .header-logo span {
-  color: #f5deb3; }
+  color: #f5deb3;
+}
 .header-panel .logout-side {
   position: fixed;
   top: 7.5px;
   left: none;
   bottom: none;
   right: 20px;
-  float: right; }
+  float: right;
+}
 
 .side-panel {
   position: fixed;
@@ -63,32 +71,38 @@ body {
   color: none;
   background-color: #25292D;
   text-align: center;
-  z-index: 2; }
+  z-index: 2;
+}
 .side-panel .side-header {
   width: 100%;
   height: 100px;
   color: #fff;
   position: relative;
-  background-color: #171a1d; }
+  background-color: #171a1d;
+}
 .side-panel .side-header .side-header-image {
   position: absolute;
   top: 10px;
   left: none;
   bottom: none;
-  right: none; }
+  right: none;
+}
 .side-panel .side-header .side-header-image img {
   width: 50px;
   height: 50px;
-  color: none; }
+  color: none;
+}
 .side-panel .side-header .side-header-username {
   position: absolute;
   top: 70px;
   left: none;
   bottom: none;
-  right: none; }
+  right: none;
+}
 .side-panel .side-header .side-header-username span {
   color: #f5deb3;
-  font-weight: 400; }
+  font-weight: 400;
+}
 .side-panel .side-content .side-list-items a {
   width: 100%;
   height: none;
@@ -103,12 +117,15 @@ body {
   -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   font-weight: 400;
-  font-size: 1.0714285714285714em; }
+  font-size: 1.0714285714285714em;
+}
 .side-panel .side-content .side-list-items a:hover {
   background: #343a40;
-  font-size: 1.2142857142857142em; }
+  font-size: 1.2142857142857142em;
+}
 .side-panel .side-content .side-list-items a:active {
-  background: #343a40; }
+  background: #343a40;
+}
 .side-panel .side-content .side-list-items a li img {
   width: 40px;
   height: 40px;
@@ -118,7 +135,8 @@ body {
   left: 5px;
   bottom: none;
   right: none;
-  float: left; }
+  float: left;
+}
 
 /* 
 
@@ -140,9 +158,12 @@ body {
   left: 220px;
   bottom: none;
   right: none;
-  width: calc( 100% - 200px - 60px); }
+  width: calc( 100% - 200px - 60px);
+  margin: 20px;
+}
 .cards .card-home {
-  margin-bottom: 30px; }
+  margin-bottom: 50px;
+}
 
 .card-panel {
   width: 270px;
@@ -158,14 +179,45 @@ body {
   -webkit-transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
   -o-transition: all 0.3s linear;
-  transition: all 0.3s linear; }
+  transition: all 0.3s linear;
+  margin: calc((100% - 270px) / 2);
+}
+@media only screen and (max-width: 767px) {
+  .card-panel {
+    width: 260px;
+    height: 350px;
+    color: #fff;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .card-panel {
+    width: 250px;
+    height: 350px;
+    color: #fff;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .card-panel {
+    width: 240px;
+    height: 350px;
+    color: #fff;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .card-panel {
+    width: 235px;
+    height: 350px;
+    color: #fff;
+  }
+}
 .card-panel .card-header {
   border-bottom: solid 3px #f5deb3;
   border-radius: 30px;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+}
 .card-panel .card-header img {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   color: unset;
   position: relative;
   top: 0;
@@ -173,98 +225,367 @@ body {
   bottom: none;
   right: none;
   float: left;
-  margin-top: -13px; }
+  margin-top: -13px;
+}
 .card-panel .card-header h2 {
   text-transform: uppercase;
   text-align: center;
   font-weight: bold;
-  font-size: 1.6em;
+  font-size: 1.4em;
   position: relative;
   top: 7px;
   left: 0;
   bottom: none;
-  right: none; }
+  right: none;
+}
 .card-panel .card-timer {
   position: relative;
   text-align: center;
   font-size: 3.1em;
-  font-weight: 400; }
-.card-panel .card-timer .hours, .card-panel .card-timer .minutes, .card-panel .card-timer .seconds {
+  font-weight: 400;
+}
+.card-panel .card-timer .hours,
+.card-panel .card-timer .minutes,
+.card-panel .card-timer .seconds {
   border-bottom: solid 3px #f5deb3;
-  border-radius: 3px; }
+  border-radius: 3px;
+}
 .card-panel .card-timer-text {
   text-align: center;
-  margin-top: -4px; }
+  margin-top: -4px;
+}
 .card-panel .card-timer-text .card-timer-text-hours {
-  position: relative;
+  position: absolute;
   top: none;
-  left: 43px;
+  left: 44px;
   bottom: none;
   right: none;
-  float: left; }
+  float: left;
+}
+@media only screen and (max-width: 767px) {
+  .card-panel .card-timer-text .card-timer-text-hours {
+    position: absolute;
+    top: none;
+    left: 38px;
+    bottom: none;
+    right: none;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .card-panel .card-timer-text .card-timer-text-hours {
+    position: absolute;
+    top: none;
+    left: 34px;
+    bottom: none;
+    right: none;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .card-panel .card-timer-text .card-timer-text-hours {
+    position: absolute;
+    top: none;
+    left: 30px;
+    bottom: none;
+    right: none;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .card-panel .card-timer-text .card-timer-text-hours {
+    position: absolute;
+    top: none;
+    left: 26px;
+    bottom: none;
+    right: none;
+  }
+}
 .card-panel .card-timer-text .card-timer-text-minutes {
-  position: relative;
+  position: absolute;
   top: none;
-  left: 7.5px;
+  left: 110px;
   bottom: none;
-  right: none; }
+  right: none;
+}
+@media only screen and (max-width: 767px) {
+  .card-panel .card-timer-text .card-timer-text-minutes {
+    position: absolute;
+    top: none;
+    left: 105px;
+    bottom: none;
+    right: none;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .card-panel .card-timer-text .card-timer-text-minutes {
+    position: absolute;
+    top: none;
+    left: 100px;
+    bottom: none;
+    right: none;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .card-panel .card-timer-text .card-timer-text-minutes {
+    position: absolute;
+    top: none;
+    left: 95px;
+    bottom: none;
+    right: none;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .card-panel .card-timer-text .card-timer-text-minutes {
+    position: absolute;
+    top: none;
+    left: 92px;
+    bottom: none;
+    right: none;
+  }
+}
 .card-panel .card-timer-text .card-timer-text-seconds {
-  position: relative;
+  position: absolute;
   top: none;
   left: none;
   bottom: none;
-  right: 35px;
-  float: right; }
+  right: 38px;
+  float: right;
+}
+@media only screen and (max-width: 767px) {
+  .card-panel .card-timer-text .card-timer-text-seconds {
+    position: absolute;
+    top: none;
+    left: none;
+    bottom: none;
+    right: 30px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .card-panel .card-timer-text .card-timer-text-seconds {
+    position: absolute;
+    top: none;
+    left: none;
+    bottom: none;
+    right: 27px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .card-panel .card-timer-text .card-timer-text-seconds {
+    position: absolute;
+    top: none;
+    left: none;
+    bottom: none;
+    right: 20px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .card-panel .card-timer-text .card-timer-text-seconds {
+    position: absolute;
+    top: none;
+    left: none;
+    bottom: none;
+    right: 20px;
+  }
+}
 .card-panel .card-btn-area {
-  text-align: center; }
+  position: absolute;
+  top: none;
+  left: 90px;
+  bottom: none;
+  right: none;
+  margin-top: 15px;
+  text-align: center;
+}
+@media only screen and (max-width: 767px) {
+  .card-panel .card-btn-area {
+    position: absolute;
+    top: none;
+    left: 84.375px;
+    bottom: none;
+    right: none;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .card-panel .card-btn-area {
+    position: absolute;
+    top: none;
+    left: 79.4117647059px;
+    bottom: none;
+    right: none;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .card-panel .card-btn-area {
+    position: absolute;
+    top: none;
+    left: 77.1428571429px;
+    bottom: none;
+    right: none;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .card-panel .card-btn-area {
+    position: absolute;
+    top: none;
+    left: 72.972972973px;
+    bottom: none;
+    right: none;
+  }
+}
 .card-panel .card-select-area {
-  margin-left: 16px; }
+  width: 238px;
+  height: none;
+  color: none;
+  position: absolute;
+  top: none;
+  left: none;
+  bottom: none;
+  right: none;
+  margin-top: 65px;
+  margin-left: 10.6666666667px;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .card-panel .card-select-area {
+    margin-left: 16px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .card-panel .card-select-area {
+    margin-left: 10.6666666667px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .card-panel .card-select-area {
+    margin-left: 6.4px;
+  }
+}
 .card-panel .card-select-area .card-select-players {
   width: 158px;
   height: 30px;
-  color: #25292D; }
+  color: #25292D;
+}
 .card-panel .card-select-area .card-select-players:active, .card-panel .card-select-area .card-select-players:focus {
-  outline: none; }
+  outline: none;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .card-panel .card-select-area .card-select-players {
+    width: 128px;
+    height: 30px;
+    color: #25292D;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .card-panel .card-select-area .card-select-players {
+    width: 133px;
+    height: 30px;
+    color: #25292D;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .card-panel .card-select-area .card-select-players {
+    width: 133px;
+    height: 30px;
+    color: #25292D;
+  }
+}
 .card-panel .card-select-area .card-select-devices {
   width: 158px;
   height: 30px;
-  color: #25292D; }
+  color: #25292D;
+}
 .card-panel .card-select-area .card-select-devices:active, .card-panel .card-select-area .card-select-devices:focus {
-  outline: none; }
+  outline: none;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .card-panel .card-select-area .card-select-devices {
+    width: 128px;
+    height: 30px;
+    color: #25292D;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .card-panel .card-select-area .card-select-devices {
+    width: 133px;
+    height: 30px;
+    color: #25292D;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .card-panel .card-select-area .card-select-devices {
+    width: 133px;
+    height: 30px;
+    color: #25292D;
+  }
+}
 .card-panel .card-select-area .input-group-text {
   width: 80px;
   height: 30px;
-  color: #25292D; }
+  color: #25292D;
+}
 .card-panel .card-action-btn {
-  position: relative;
-  top: 5px;
-  left: none;
-  bottom: none;
+  position: absolute;
+  top: none;
+  left: 5px;
+  bottom: 15px;
   right: none;
-  padding: 0 15px 0 15px; }
+  padding: 0 20px 0 20px;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .card-panel .card-action-btn {
+    position: absolute;
+    top: none;
+    left: 0;
+    bottom: 20px;
+    right: none;
+    margin-left: -8px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .card-panel .card-action-btn {
+    position: absolute;
+    top: none;
+    left: 0;
+    bottom: 20px;
+    right: none;
+    margin-left: -10px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .card-panel .card-action-btn {
+    position: absolute;
+    top: none;
+    left: 0;
+    bottom: 20px;
+    right: none;
+    margin-left: -15px;
+  }
+}
 .card-panel .card-action-btn img {
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
   color: none;
-  margin-right: 5px;
-  margin-bottom: 10px; }
+  margin-left: 8px;
+  margin-bottom: 10px;
+}
 .card-panel .card-action-btn .card-add-item {
-  float: left; }
+  float: left;
+}
 .card-panel .card-action-btn .card-checkout {
-  float: right; }
+  float: right;
+}
 
-@media only screen and (max-width: 767px) {
-  .card-panel {
-    margin: calc((100% - 270px)/2); } }
 .active.card-panel {
   border: solid 3px green;
-  border-radius: 20px; }
+  border-radius: 20px;
+}
 .active.card-panel .card-header {
   border-bottom: solid 3px green;
-  border-radius: 30px; }
-.active.card-panel .card-timer .hours, .active.card-panel .card-timer .minutes, .active.card-panel .card-timer .seconds {
+  border-radius: 30px;
+}
+.active.card-panel .card-timer .hours,
+.active.card-panel .card-timer .minutes,
+.active.card-panel .card-timer .seconds {
   border-bottom: solid 3px green;
-  border-radius: 3px; }
+  border-radius: 3px;
+}
 
 .logout-btn {
   width: none;
@@ -277,14 +598,18 @@ body {
   border: solid 1px #fff;
   border-radius: 5px;
   font-weight: 700;
-  font-size: 14px; }
+  font-size: 14px;
+}
 .logout-btn:active, .logout-btn:focus {
-  outline: none; }
+  outline: none;
+}
 .logout-btn:hover {
   background-color: #f5deb3;
-  border: solid 0.5px #000; }
+  border: solid 0.5px #000;
+}
 
-#startStop, #reset {
+#startStop,
+#reset {
   border: solid 1px #000;
   border-radius: 5px;
   width: 60px;
@@ -296,44 +621,60 @@ body {
   transition: all 0.3s ease-in-out;
   margin: 12px;
   font-size: 1.2em;
-  font-weight: 600; }
-#startStop:active, #startStop:focus, #reset:active, #reset:focus {
-  outline: none; }
-#startStop:hover, #reset:hover {
+  font-weight: 600;
+}
+#startStop:active, #startStop:focus,
+#reset:active,
+#reset:focus {
+  outline: none;
+}
+#startStop:hover,
+#reset:hover {
   background-color: #f5deb3;
-  border: solid 0.5px #000; }
-#startStop:hover, #reset:hover {
-  transform: scale(1.1); }
+  border: solid 0.5px #000;
+}
+#startStop:hover,
+#reset:hover {
+  transform: scale(1.1);
+}
 
 #reset {
-  display: none; }
+  display: none;
+}
 #reset:hover {
   background-color: red;
-  border: solid 0.5px #000; }
+  border: solid 0.5px #000;
+}
 
 .card-add-item-btn, .card-checkout-btn {
   border: solid 1px #000;
   border-radius: 5px;
-  width: 70px;
-  height: 30px;
+  width: 60px;
+  height: 25px;
   color: none;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  font-size: 1.1em;
-  font-weight: 600; }
+  margin-left: 4px;
+  font-size: 0.9em;
+  font-weight: 900;
+}
 .card-add-item-btn:active, .card-add-item-btn:focus, .card-checkout-btn:active, .card-checkout-btn:focus {
-  outline: none; }
+  outline: none;
+}
 .card-add-item-btn:hover, .card-checkout-btn:hover {
-  transform: scale(1.05); }
+  transform: scale(1.05);
+}
 
 .card-add-item-btn:hover {
   background-color: #0026b1;
-  border: solid 0.5px #000; }
+  border: solid 0.5px #000;
+}
 
 .card-checkout-btn:hover {
   background-color: #28a745;
-  border: solid 0.5px #000; }
+  border: solid 0.5px #000;
+}
 
 /*# sourceMappingURL=main.css.map */

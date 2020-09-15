@@ -1,18 +1,29 @@
 .card-panel {
-    @include commonProberty( $card-width, 350px, #fff);
-    @include position(relative, none , none, none , none);
-    @include border( solid 3px $second-color , 20px);
-    @include prefixer(
-                    transition,
-                    all 0.3s linear,
-                    webkit moz o
-                );
+    @include commonProberty($card-width, 350px, #fff);
+    @include position(relative, none, none, none, none);
+    @include border(solid 3px $second-color, 20px);
+    @include prefixer(transition, all 0.3s linear, webkit moz o);
+    @include mobile{
+        @include commonProberty($card-width - 10px, 350px , #fff);
+    };
+    @include small{
+        @include commonProberty($card-width - 20px, 350px , #fff);
+    };
+    @include medium{
+        @include commonProberty($card-width - 30px, 350px , #fff);
+    };
+    @include large{
+        @include commonProberty($card-width - 35px, 350px , #fff);
+    };
+    margin: calc((100% - #{$card-width}) / 2);
+
+    
     .card-header {
-        @include border-bottom ( solid 3px $second-color , 30px);
+        @include border-bottom(solid 3px $second-color, 30px);
         margin-bottom: 10px;
         img {
-            @include commonProberty(60px, 60px, unset );
-            @include position(relative, 0 , 0, none , none);
+            @include commonProberty(50px, 50px, unset);
+            @include position(relative, 0, 0, none, none);
             float: left;
             margin-top: -13px;
         }
@@ -21,86 +32,226 @@
             text-align: center;
             font: {
                 weight: bold;
-                size: 1.6em;
+                size: 1.4em;
             }
-            @include position(relative , 7px, 0, none , none);
+            @include position(relative, 7px, 0, none, none);
         }
     }
-    .card-timer{
+    .card-timer {
         position: relative;
         text-align: center;
         font: {
             size: 3.1em;
             weight: 400;
         }
-        .hours,.minutes,.seconds{
-            @include border-bottom( solid 3px $second-color , 3px);
+        .hours,
+        .minutes,
+        .seconds {
+            @include border-bottom(solid 3px $second-color, 3px);
         }
     }
-    .card-timer-text{
+    .card-timer-text {
         text-align: center;
         margin-top: -4px;
-        .card-timer-text-hours{
-            @include position(relative, none , 43px, none , none);
+        .card-timer-text-hours {
+            @include position(absolute, none, 44px, none, none);
+            @include mobile{
+                @include position(absolute, none, 38px, none, none);
+            };
+            @include small{
+                @include position(absolute, none, 34px, none, none);
+            };
+            @include medium{
+                @include position(absolute, none, 30px, none, none);
+            };
+            @include large {
+                @include position(absolute, none, 26px, none, none);
+            };
             float: left;
         }
-        .card-timer-text-minutes{
-            @include position(relative, none , 7.5px, none , none);
+        .card-timer-text-minutes {
+            @include position(absolute, none, 110px, none, none);
+            @include mobile{
+                @include position(absolute, none, 105px, none, none);
+            };
+            @include small{
+                @include position(absolute, none, 100px, none, none);
+            };
+            @include medium {
+                @include position(absolute, none, 95px, none, none);
+            };
+            @include large {
+                @include position(absolute, none, 92px, none, none);
+            };
         }
-        .card-timer-text-seconds{
-            @include position(relative, none , none, none , 35px);
-            float: right;            
+        .card-timer-text-seconds {
+            @include position(absolute, none, none, none, 38px);
+            @include mobile{
+                @include position(absolute, none, none, none, 30px);
+            };
+            @include small{
+                @include position(absolute, none, none, none, 27px);
+            };
+            @include medium{
+                @include position(absolute, none, none, none, 20px);
+            };
+            @include large {
+                @include position(absolute, none, none, none, 20px);
+            };
+            float: right;
         }
+
     }
-    .card-btn-area{
+    .card-btn-area {
+        @include position(absolute, none, $card-width / 3 ,none ,none);
+        @include mobile {
+            @include position(absolute, none, $card-width / 3.2, none, none);
+        };
+        @include small {
+            @include position(absolute, none, $card-width / 3.4, none, none);
+        };
+        @include medium{
+            @include position(absolute, none, $card-width / 3.5, none, none);
+        };
+        @include large {
+            @include position(absolute, none, $card-width / 3.7, none, none);
+        };
+        margin-top: 15px;
         text-align: center;
     }
-    .card-select-area{
-        margin-left:($card-width - ($card-select-players-height+$input-group-text-height)) / 2;
-        .card-select-players{
-            @include commonProberty($card-select-players-height, $card-select-players-width, $main-color);
+    .card-select-area {
+        @include commonProberty($card-width - 32px, none ,none);
+        @include position(absolute, none,none,none,none);
+        @include small{
+            margin-left: (
+                $card-width -
+                    ($card-select-players-width+ $input-group-text-width)
+            ) / 2;       
+        };
+        @include medium{
+            margin-left: (
+                $card-width -
+                    ($card-select-players-width+ $input-group-text-width)
+            ) / 3;       
+        };
+        @include large {
+            margin-left: (
+                $card-width -
+                    ($card-select-players-width+ $input-group-text-width)
+            ) / 5;       
+        };
+        margin-top: 65px;
+        margin-left: (
+                $card-width -
+                    ($card-select-players-width+ $input-group-text-width)
+            ) / 3;
+        
+        .card-select-players {
+            @include commonProberty(
+                $card-select-players-width,
+                $card-select-players-height,
+                $main-color
+            );
             @include outlineBtn(none);
+            @include small {
+                @include commonProberty(
+                    $card-select-players-width - 30px,
+                    $card-select-players-height,
+                    $main-color
+                );
+            };
+            @include medium {
+                @include commonProberty(
+                    $card-select-players-width - 25px,
+                    $card-select-players-height,
+                    $main-color
+                );
+            };
+            @include large {
+                @include commonProberty(
+                    $card-select-players-width - 25px,
+                    $card-select-players-height,
+                    $main-color
+                );
+            };
         }
-        .card-select-devices{
-            @include commonProberty($card-select-players-height , $card-select-players-width, $main-color);
+        .card-select-devices {
+            @include commonProberty(
+                $card-select-players-width,
+                $card-select-players-height,
+                $main-color
+            );
             @include outlineBtn(none);
+            @include small {
+                @include commonProberty(
+                    $card-select-players-width - 30px,
+                    $card-select-players-height,
+                    $main-color
+                );
+            };
+            @include medium {
+                @include commonProberty(
+                    $card-select-players-width - 25px,
+                    $card-select-players-height,
+                    $main-color
+                );
+            };
+            @include large {
+                @include commonProberty(
+                    $card-select-players-width - 25px,
+                    $card-select-players-height,
+                    $main-color
+                );
+            };
         }
-        .input-group-text{
-            @include commonProberty($input-group-text-height , $card-select-players-width, $main-color);
+        .input-group-text {
+            @include commonProberty(
+                $input-group-text-width,
+                $input-group-text-height,
+                $main-color
+            );
         }
     }
-    .card-action-btn{
-        @include position(relative, 5px , none ,none,none);
-        padding: 0 15px 0 15px;
-        img{
-            @include commonProberty(35px, 35px, none);
-            margin-right: 5px;
+    .card-action-btn {
+        @include position(absolute, none, 5px, 15px, none);
+        @include small {
+            @include position(absolute, none, 0, 20px, none);
+            margin-left: -8px;
+        };
+        @include medium {
+            @include position(absolute, none, 0, 20px, none);
+            margin-left: -10px;
+        };
+        @include large {
+            @include position(absolute, none, 0, 20px, none);
+            margin-left: -15px;
+        };
+        padding: 0 20px 0 20px;
+        img {
+            @include commonProberty(30px, 30px, none);
+            margin-left: 8px;
             margin-bottom: 10px;
         }
-        .card-add-item{
+        .card-add-item {
             float: left;
         }
-        .card-checkout{
+        .card-checkout {
             float: right;
         }
     }
 }
 
-@include mobile {
-    .card-panel{
-        margin: calc((100% - #{$card-width})/2);
-    }
-}
-
-.active{
-    &.card-panel{
-        @include border( solid 3px green , 20px);
-        .card-header{
-            @include border-bottom ( solid 3px green , 30px);
-            }
-        .card-timer{
-            .hours,.minutes,.seconds{
-                @include border-bottom( solid 3px green , 3px);    
+.active {
+    &.card-panel {
+        @include border(solid 3px green, 20px);
+        .card-header {
+            @include border-bottom(solid 3px green, 30px);
+        }
+        .card-timer {
+            .hours,
+            .minutes,
+            .seconds {
+                @include border-bottom(solid 3px green, 3px);
             }
         }
     }

@@ -2,7 +2,7 @@
     <div class="cards">
         <div class="row">
             <div
-                class="col-md-3"
+                class="col-sm-12 col-md-6 col-lg-4 col-xl-3"
                 v-for="(card, index) in noOfCards"
                 :key="index"
             >
@@ -19,7 +19,7 @@ export default {
     name: "Home",
     data: function() {
         return {
-            noOfCards: 10
+            noOfCards: 8
         };
     },
     components: {
